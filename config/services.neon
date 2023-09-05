@@ -1,0 +1,27 @@
+search:
+	-
+		in: %appDir%
+		classes:
+			- *Entity
+			- *Service			
+
+
+
+services:
+	- App\Router\RouterFactory::createRouter
+	craForm:
+		class: App\Presenters\forms\CraForm
+		autowired: true
+		inject: true
+		
+		
+extensions:
+	translation: Contributte\Translation\DI\TranslationExtension
+
+translation:
+	locales:
+		default: cs_CZ
+		whitelist: [en, de, es, pl, fr, cs_CZ, sk, ru, hu]
+		fallback: [cs_CZ]
+	dirs:
+		- %appDir%/lang

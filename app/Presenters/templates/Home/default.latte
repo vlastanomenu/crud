@@ -1,0 +1,31 @@
+{block content}
+	<div id="banner">
+		<h1 n:block=title>CRA - vypis</h1>
+	</div>
+
+	<div id="content">
+		<ul>
+			<li><a n:href="Home:detail">Nový záznam</a></li>
+		</ul>
+		<table cellpadding="3">
+			<tr>
+				<td>{_messages.back.cra.table.id}</td>
+				<td>{_messages.back.cra.table.name}</td>
+				<td>{_messages.back.cra.table.description}</td>
+				<td>{_messages.back.cra.table.dateInsert}</td>
+				<td>{_messages.back.cra.table.dateUpdate}</td>
+			</tr>
+			<tr n:foreach="$dataList as $item">
+				<td style="border-bottom: 1px dashed gray">{$item->getId()}</td>
+				<td style="border-bottom: 1px dashed gray">{$item->getName()}</td>
+				<td style="border-bottom: 1px dashed gray">{$item->getDescription()}</td>
+				<td style="border-bottom: 1px dashed gray">{$item->getDateInsert()|date:'d.m.Y H:i'}</td>
+				<td style="border-bottom: 1px dashed gray">{$item->getDateUpdate()|date:'d.m.Y H:i'}</td>
+				<td style="border-bottom: 1px dashed gray"><a n:href="Home:detail, id: $item->getId()">edit</a></td>
+				<td style="border-bottom: 1px dashed gray"><a n:href="delete!, id: $item->getId()">del</a></td>
+			</tr>
+		</table>
+	</div>
+
+{/block}
+

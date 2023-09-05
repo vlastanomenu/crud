@@ -1,0 +1,20 @@
+back:
+	cra:
+		table:
+			id: ID
+			name: Název
+			description: Popis
+			dateInsert: Datum vytvoření
+			dateUpdate: Datum aktualizace
+		form:
+			name: Název
+			nameRequired: "Musíte zadat jméno!"
+			description: Popis
+			publish: Publikovat
+			send: Odeslat
+		flash:
+			insert: "Data byla uložena!"
+			update: "Data byla aktualizována!"
+			error: "Chyba při uložení dat!"
+			delete: "Data byla smazána!"
+			errorDel: "Chyba při smazání dat!"

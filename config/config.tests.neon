@@ -1,0 +1,4 @@
+database:
+	dsn: 'mysql:host=127.0.0.1;dbname=cra_cz_test'
+	user: root
+	password: xxxxxx
